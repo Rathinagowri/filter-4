@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+<div ng-app="myApp">
+
+<p>No of minutes for a day {{ x | min }}</p>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.filter('min',function() {
+    return function(x) {
+    var n = 24*60;
+        return n;
+
+    };
+});
+</script>
+
+</body>
+</html>
